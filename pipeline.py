@@ -34,4 +34,4 @@ async def run(user_message: str, state: SessionState, thread_id: str = "default"
     # Writer reads doc_context from state via tool, returns structured report
     writer_result = await writer_agent.ainvoke(router_result, config=config)
 
-    return writer_result["messages"][-1].content
+    return writer_result["messages"][-1].content, router_result
