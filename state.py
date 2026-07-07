@@ -1,6 +1,5 @@
 from langchain.agents import AgentState
 
-
 class SessionState(AgentState):
     library: str
     version: str | None
